@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1575561395 source:f:\myprogramms\tinkoff\tink4\main.c
+	<stdio.h>
+	<stdlib.h>
+

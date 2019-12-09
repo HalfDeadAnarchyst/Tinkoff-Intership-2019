@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, N, X1, X2, Y1, Y2;
+    int arr[10000], buf[10000];
+
+    scanf("%d%d%d%d%d", &N, &X1, &Y1, &X2, &Y2);
+
+    for (i=0;i<N;i++)
+        arr[i]=i+1;
+
+    for(i=0;i<(Y1-X1+1);i++){
+        buf[i]=arr[X1+i-1];
+    }
+    for (i=0;i<N;i++)
+        printf("%d", buf[i]);
+    for(i=0;i<(Y1-X1);i++){
+        arr[Y1-i-1]=buf[i];
+    }
+    printf("\n");
+    for (i=0;i<N;i++)
+        printf("%d", arr[i]);
+}

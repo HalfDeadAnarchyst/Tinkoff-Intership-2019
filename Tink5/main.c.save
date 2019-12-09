@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct rectangle
+{
+    int x1;
+    int y1;
+    int x2;
+    int y2;
+};
+
+int main()
+{
+    struct rectangle rect[2000];
+    short field[1000][1000];
+    int i, j, k, N;
+
+    for(j=0;j<1000;j++)
+        for(k=0;k<1000;k++)
+            field[j][k]=0;
+
+    scanf("%d", &N);
+    for(i=0;i<(N);i++){
+        scanf("%d%d%d%d", &rect[i].x1, &rect[i].y1, &rect[i].x2, &rect[i].y2);
+        if((rect[i].x1!=rect[i].x2)&&(y1!=y2))
+            for(j=rect[i].x1;j<=rect[i].x2;j++)
+                for(k=rect[i].y1;k<=rect[i].y2;k++)
+                    field[j][k]=1;
+    }
+
+    i=0;
+    for(j=0;j<1000;j++)
+        for(k=0;k<1000;k++)
+            if(field[j][k]!=0)
+                i++;
+
+
+    printf("%d", i/2);
+}
